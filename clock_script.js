@@ -3,13 +3,13 @@ const MINUTE_HAND = document.querySelector("#minute");
 const SECOND_HAND = document.querySelector("#second");
 
 function moveClockHands(){
-
     var date = new Date();
 
     let hour = date.getHours();
     let minute = date.getMinutes();
     let seconds = date.getSeconds();
 
+    //  Calculate degree for position of hour minute and seconds hand
     let hourPosition = hour*360/12 + (minute*360/60)/12;
     let minutePosition = (minute*360/60) + (seconds*360/60)/60;
     let secondPosition = seconds*360/60;
